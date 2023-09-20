@@ -1,6 +1,13 @@
-function index() {
+import { getFeaturedEvents } from '../dummy-data'
+import EventList from '../components/events/event-list'
+
+function HomePage() {
+  const featuredEvents = getFeaturedEvents()
+
   return (
-    <h1>This is the home page</h1>
+    <>
+      <EventList items={featuredEvents} />
+    </>
   )
 }
-export default index
+export default HomePage
